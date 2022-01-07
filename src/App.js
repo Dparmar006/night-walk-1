@@ -1,22 +1,19 @@
-import { Col, Container, Row } from 'reactstrap'
-import Input from './components/inputs/Input'
+import { publicRoutes } from './routes/routes'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App () {
   return (
-    <Container fluid className='app'>
-      <Row>
-        <Col md={3}>
-          <Input trailingIcon={'👋'} name={'First name'} label={'First name'} />
-        </Col>
-        <Col md={6}>
-          <Input
-            placeholder='Last name'
-            name={'First name'}
-            label={'First name'}
+    <BrowserRouter>
+      <Routes>
+        {publicRoutes.map(route => (
+          <Route
+            key={route.pathname}
+            element={route.component}
+            path={route.pathname}
           />
-        </Col>
-      </Row>
-    </Container>
+        ))}
+      </Routes>
+    </BrowserRouter>
   )
 }
 

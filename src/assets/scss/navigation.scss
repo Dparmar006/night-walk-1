@@ -1,0 +1,30 @@
+// BOTTOM  NAVIGATION
+.bottom-navigation {
+    display: flex;
+    overflow-x: hidden;
+    justify-content: space-around;
+    position: fixed;
+    width: 98%;
+    bottom: 1rem;
+    padding: .6rem;
+    border-radius: $border-radius-lg;
+    background-color: $black;
+    .bottom-navigation-icon {
+        display: grid;
+        place-items: center;
+    }
+    .bottom-navigation-icon {
+        font-size: 2.4vw;
+    }
+    .bottom-navigation-title {
+        font-size: 1.2rem;
+    }
+}
+.bottom-navigation::-webkit-scrollbar, 
+.bottom-navigation::-webkit-scrollbar-track, 
+.bottom-navigation::-webkit-scrollbar-button, 
+.bottom-navigation::-webkit-scrollbar-track-piece {
+    display: none; 
+    scrollbar-width: none;
+}
+
