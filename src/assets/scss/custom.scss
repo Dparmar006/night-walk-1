@@ -10,3 +10,27 @@ body {
     font-family: 'Quicksand', sans-serif;
     color: $light;
 }
+
+.main {
+    display: grid;
+    grid-template: 
+    "navbar navbar"
+    "sidebar page"
+    "footer footer";
+    grid-template-columns: 16% auto;
+    grid-template-rows: 8% 90% 5%;
+    transition: all 200ms linear;
+}
+
+.expanded-main {
+    grid-template-columns: 6% auto;
+}
+
+.page-content {
+    padding: 1rem;
+    grid-area: page;
+    height: calc(100vh - 3rem);
+    // width: 100%;/
+    // 100vh - (2rem padding) - (3rem navbar) - (1rem extra)
+
+}

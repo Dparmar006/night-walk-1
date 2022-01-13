@@ -1,0 +1,29 @@
+.sidebar {
+    grid-area: sidebar;
+    background: $black;
+    height: calc(100vh - 3rem);
+    // 100vh  - (3rem navbar)
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    transition: all 200ms linear;
+    width: 100%;
+}
+
+.sidebar-collapsed {
+   width: 5rem;  
+}
+
+.sidebar-list {
+    width: 100%;
+    list-style-type: none;
+    padding: 0px;
+    li {
+        margin-bottom: 1rem;
+        width: 100%;
+        a{
+            width: 100%;
+        }
+    }
+}
