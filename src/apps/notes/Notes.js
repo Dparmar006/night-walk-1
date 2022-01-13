@@ -25,7 +25,7 @@ const Notes = () => {
 
   return (
     <Row>
-      <Col xl={6} xs={12}>
+      <Col md={6} xs={12}>
         <Input
           name='title'
           value={inputs.title}
@@ -50,10 +50,10 @@ const Notes = () => {
           onClick={handleSubmit}
         />
       </Col>
-      <Col sm={6}>
+      <Col md={6} xs={12}>
         <Card
           color='black'
-          style={{ maxHeight: '37vh', height: '100%', overflowY: 'scroll' }}
+          style={{ maxHeight: '39vh', height: '100%', overflowY: 'scroll' }}
         >
           <CardBody>
             {notes.length ? (
