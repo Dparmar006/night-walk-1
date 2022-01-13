@@ -10,7 +10,8 @@ const TextArea = React.forwardRef(
       name,
       placeholder,
       wrapperClass,
-      trailingIcon
+      trailingIcon,
+      ...rest
     },
     ref
   ) => {
@@ -24,6 +25,7 @@ const TextArea = React.forwardRef(
           onChange={onChange}
           rows={rows}
           ref={ref}
+          {...rest}
         />
         <div className='input-trailing-icon'>
           {!!trailingIcon && trailingIcon}

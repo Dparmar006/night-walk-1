@@ -12,7 +12,7 @@ const Notes = () => {
   })
   const inputRef = useRef()
   const handleSubmit = () => {
-    if (inputs.title || inputs.description) {
+    if (inputs.title && inputs.description) {
       setNotes([...notes, { ...inputs }])
       setInputs({ ...inputs, title: '', description: '' })
       inputRef.current.focus()
@@ -25,7 +25,7 @@ const Notes = () => {
 
   return (
     <Row>
-      <Col md={6} xs={12}>
+      <Col tag={'form'} md={6} xs={12}>
         <Input
           name='title'
           value={inputs.title}
@@ -33,6 +33,7 @@ const Notes = () => {
           ref={inputRef}
           placeholder='Title'
           autoFocus
+          required
         />
         <br />
         <TextArea
@@ -40,6 +41,7 @@ const Notes = () => {
           value={inputs.description}
           onChange={handleChange}
           placeholder='Description'
+          required
         />
         <br />
         <Button
