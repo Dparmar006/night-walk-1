@@ -1,0 +1,19 @@
+
+.list {
+    list-style-type: none;
+    padding: 0%;
+    margin: 0%;
+
+    .list-item {
+        .list-title::before {
+            content: "👉 ";
+        }
+        .list-description {
+            padding-left: 2.6rem;
+        }
+    }
+    
+}
+
+
+

@@ -14,7 +14,7 @@ body {
 .main {
     display: grid;
     grid-template: 
-    "navbar navbar"
+    "sidebar navbar"
     "sidebar page"
     "footer footer";
     grid-template-columns: 16% auto;
@@ -23,14 +23,12 @@ body {
 }
 
 .expanded-main {
-    grid-template-columns: 6% auto;
+    grid-template-columns: 5rem auto;
 }
 
 .page-content {
-    padding: 1rem;
+    margin: 1rem;
     grid-area: page;
-    height: calc(100vh - 3rem);
-    // width: 100%;/
-    // 100vh - (2rem padding) - (3rem navbar) - (1rem extra)
-
+    height: calc(100vh - 5rem);
+    overflow-x: hidden;
 }

@@ -1,14 +1,18 @@
 .sidebar {
     grid-area: sidebar;
     background: $black;
-    height: calc(100vh - 3rem);
-    // 100vh  - (3rem navbar)
+    height: 100vh;
     position: sticky;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-direction: column;
     padding: 1rem;
     transition: all 200ms linear;
     width: 100%;
+    box-shadow: $minimal-shadow;
+    .logo {
+        margin-bottom: 1rem;
+    }
 }
 
 .sidebar-collapsed {
@@ -23,6 +27,8 @@
         margin-bottom: 1rem;
         width: 100%;
         a{
+            display: flex;
+            justify-content: space-between;
             width: 100%;
         }
     }

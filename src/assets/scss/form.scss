@@ -20,7 +20,8 @@ input[type="*"] {
 }
 
 // input ["text"]
-input[type="text"]{
+input[type="text"], 
+textarea{
     outline: none;
     padding: .5rem .7rem;
     padding-right: 2rem;
@@ -32,7 +33,12 @@ input[type="text"]{
     border-radius: .3rem;
     transition: all .4s ease-in;
 }
-input[type="text"]:focus{
+input[type="text"]:focus,
+textarea:focus{
     border: 2px solid $indigo;
 }
 
+// textarea
+textarea{
+    resize: none;
+}

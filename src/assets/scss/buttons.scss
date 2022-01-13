@@ -1,0 +1,28 @@
+.button {
+    outline: none;
+    border: none;
+    // background: $black;
+    width: fit-content;
+    color: $light;
+    padding: .6rem 1rem;
+    border-radius: $border-radius-lg;
+    transition: all 200ms linear;
+    text-shadow: none;
+    
+    &:focus {
+        text-shadow: $minimal-shadow;
+    }
+}
+
+.emoji-button {
+    outline: none;
+    border: none;
+    background: transparent;
+    border-radius: 50%;
+    transition: all 200ms linear;
+    
+    &:hover,
+    &:focus {
+        transform: scale(1.1);
+    }
+}

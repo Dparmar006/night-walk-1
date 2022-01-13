@@ -1,18 +1,29 @@
 import React from 'react'
 
-const Input = React.forwardRef(
+const TextArea = React.forwardRef(
   (
-    { value, label, name, placeholder, wrapperClass, trailingIcon, ...rest },
+    {
+      value,
+      rows = 5,
+      onChange,
+      label,
+      name,
+      placeholder,
+      wrapperClass,
+      trailingIcon,
+      ...rest
+    },
     ref
   ) => {
     return (
       <div className={wrapperClass + ' input-wrapper '}>
         {!!label && <label htmlFor={name}>{label !== '' ? name : label}</label>}
-        <input
-          type='text'
+        <textarea
           placeholder={placeholder || name}
           name={name}
           value={value}
+          onChange={onChange}
+          rows={rows}
           ref={ref}
           {...rest}
         />
@@ -24,4 +35,4 @@ const Input = React.forwardRef(
   }
 )
 
-export default Input
+export default TextArea
