@@ -23,6 +23,8 @@
         margin-bottom: 1rem;
         width: 100%;
         a{
+            display: flex;
+            justify-content: space-between;
             width: 100%;
         }
     }

@@ -1,7 +1,7 @@
 export const menuItems = [
   {
     icon: '🏠',
-    title: 'Home',
+    title: 'Dashboard',
     pathname: '/'
   },
   {
