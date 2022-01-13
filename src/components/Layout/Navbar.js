@@ -1,6 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { collapseSidebar, expandSidebar } from '../../redux/actions/ui'
+import EmojiButton from '../buttons/EmojiButton'
 
 const Navbar = () => {
   const dispatch = useDispatch()
@@ -11,9 +12,20 @@ const Navbar = () => {
   }
   return (
     <nav className='navbar'>
-      <button className='btn sm' onClick={sidebarToggle}>
-        <span class='material-icons'>face</span>
-      </button>
+      {ui.sidebarExpanded ? (
+        <EmojiButton
+          emoji={'👈'}
+          tooltipTitle={'Close menu'}
+          onClick={sidebarToggle}
+        />
+      ) : (
+        <EmojiButton
+          emoji={'👉'}
+          tooltipTitle={'Open menu'}
+          onClick={sidebarToggle}
+        />
+      )}
+      <EmojiButton emoji={'🧑'} />
     </nav>
   )
 }

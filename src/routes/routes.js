@@ -7,7 +7,7 @@ export const publicRoutes = [
   {
     pathname: '/',
     component: (
-      <BasicLayout title='Home'>
+      <BasicLayout title='Dashboard'>
         <Dashboard />
       </BasicLayout>
     )

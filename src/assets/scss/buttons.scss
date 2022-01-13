@@ -1,0 +1,12 @@
+.emoji-button {
+    outline: none;
+    border: none;
+    background: transparent;
+    border-radius: 50%;
+    transition: all 200ms linear;
+}
+
+.emoji-button:hover,
+.emoji-button:focus {
+    transform: scale(1.1);
+}

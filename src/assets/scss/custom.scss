@@ -14,7 +14,7 @@ body {
 .main {
     display: grid;
     grid-template: 
-    "navbar navbar"
+    "sidebar navbar"
     "sidebar page"
     "footer footer";
     grid-template-columns: 16% auto;

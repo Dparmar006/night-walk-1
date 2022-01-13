@@ -10,7 +10,7 @@ const Sidebar = () => {
     () => (
       <ul className='sidebar-list'>
         {menuItems.map(menu => (
-          <li className='sidebar-list-item'>
+          <li className='sidebar-list-item' key={menu.pathname}>
             <NavLink className='btn-primary btn' to={menu.pathname}>
               {ui.sidebarExpanded && menu.title}
               <span>{menu.icon}</span>
@@ -27,6 +27,11 @@ const Sidebar = () => {
       className={`sidebar
     ${!ui.sidebarExpanded && 'sidebar-collapsed'}`}
     >
+      {ui.sidebarExpanded ? (
+        <h5 className='logo'>NyghtWalk</h5>
+      ) : (
+        <h5 className='logo'>N W</h5>
+      )}
       {sidebarList}
     </section>
   )
